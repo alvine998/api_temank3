@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  express-app:
+    container_name: api_temank3
+    build: .
+    ports:
+      - "4003:4003"
+    volumes:
+      - .:/app
+      - /app/node_modules
+    environment:
+      - NODE_ENV=development
+networks:
+  web:
+    external: true

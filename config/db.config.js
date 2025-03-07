@@ -6,10 +6,13 @@ module.exports = {
     PASSWORD: "stokinventory.com",
     DB: "stokinve_temank3",
     dialect: "mysql",
+    dialectOptions: {
+    connectTimeout: 60000, // Increase timeout (default is 10s)
+  },
     pool: {
         max: 5,
         min: 0,
-        acquire: 30000,
+        acquire: 60000,
         idle: 10000
     }
 };

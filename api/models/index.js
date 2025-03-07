@@ -7,6 +7,9 @@ const sequelize = new Sequelize(dbConfig.DB, dbConfig.USER, dbConfig.PASSWORD, {
   dialect: dbConfig.dialect,
   operatorsAliases: false,
   dialectModule: mysql2,
+  dialectOptions: {
+    connectTimeout: 60000, // Increase timeout (default is 10s)
+  },
   pool: {
     max: dbConfig.pool.max,
     min: dbConfig.pool.min,

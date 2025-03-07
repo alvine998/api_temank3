@@ -1,10 +1,10 @@
 require('dotenv').config()
 
 module.exports = {
-    HOST: "202.52.146.203",
-    USER: "stokinve_root",
-    PASSWORD: "stokinventory.com",
-    DB: "stokinve_temank3",
+    HOST: "154.26.137.37",
+    USER: "root",
+    PASSWORD: "root1234",
+    DB: "temank3",
     dialect: "mysql",
     dialectOptions: {
     connectTimeout: 60000, // Increase timeout (default is 10s)

@@ -47,16 +47,16 @@ exports.list = async (req, res) => {
 
 exports.create = async (req, res) => {
     try {
-        ['name', 'tool_type', 'birth_place', 'birth_date', 'photo', 'clasification', 'personel_type', 'regis_no', 'expired_at',
-            'class']?.map(value => {
-                if (!req.body[value]) {
-                    return res.status(400).send({
-                        status: "error",
-                        error_message: "Parameter tidak lengkap " + value,
-                        code: 400
-                    })
-                }
-            })
+        const requiredFields = ['name', 'tool_type', 'birth_place', 'birth_date', 'photo', 'clasification', 'personel_type', 'regis_no', 'expired_at', 'class'];
+        for (const field of requiredFields) {
+            if (!req.body[field]) {
+                return res.status(400).send({
+                    status: "error",
+                    error_message: "Parameter tidak lengkap " + field,
+                    code: 400
+                });
+            }
+        }
         const payload = {
             ...req.body,
         };

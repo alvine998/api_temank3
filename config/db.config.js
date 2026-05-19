@@ -5,6 +5,7 @@ module.exports = {
     USER: "root",
     PASSWORD: "Tokotitoh@2024!",
     DB: "temank3",
+    PORT: process.env.DB_PORT || 6670,
     dialect: "mysql",
     dialectOptions: {
     connectTimeout: 60000, // Increase timeout (default is 10s)

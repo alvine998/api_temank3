@@ -1,7 +1,7 @@
 require('dotenv').config()
 
 module.exports = {
-    HOST: "127.0.0.1",
+    HOST: "154.26.137.37",
     USER: "root",
     PASSWORD: "Tokotitoh@2024!",
     DB: "temank3",
